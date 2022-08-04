@@ -1,5 +1,6 @@
 import './App.css'
-
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Home from '../src/pages/Home'
 /*
 import reactLogo from './assets/react.svg'
 <img width="60px" src="/vite.svg" className="logo" alt="Vite logo" />
@@ -9,9 +10,12 @@ import reactLogo from './assets/react.svg'
 function App() {
 
   return (
-    <div className="App">
-
-    </div>
+    <Router>
+      <p>Navbar</p>
+      <Routes>
+        <Route path='/' exact element={<Home/>}/>
+      </Routes>
+    </Router>
   )
 }
 
