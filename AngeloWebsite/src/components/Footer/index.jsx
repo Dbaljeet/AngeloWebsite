@@ -1,20 +1,17 @@
 import React from "react";
-import trutro from '../../assets/trutro.png'
+import Trutro from "./Trutro";
 const Footer = () =>{
+
+
+
     return(
         <>
-        <div className="contentx">
-            <img src={trutro} alt="React logo" />
-            <img src={trutro} alt="React logo" />
-            <img src={trutro} alt="React logo" />
-            <img src={trutro} alt="React logo" />
-            <img src={trutro} alt="React logo" />
-
-            <img src={trutro} alt="React logo" />
-            <img src={trutro} alt="React logo" />
-            <img src={trutro} alt="React logo" />
-            <img src={trutro} alt="React logo" />
-            <img src={trutro} alt="React logo" />
+        <div className="contentx"> 
+            <Trutro></Trutro>
+            <Trutro></Trutro>
+            <Trutro></Trutro>
+            <Trutro></Trutro>
+            <Trutro></Trutro>
         </div>
         </>
     )
