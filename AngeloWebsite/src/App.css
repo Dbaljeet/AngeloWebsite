@@ -42,6 +42,18 @@
   color: #888;
 }
 */
-.contentx{
-  display: flex;
+body{
+  background-color:#000000d3;
+  margin: 0;
+  padding: 0;
+}
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+*::selection{
+  background-color: rgb(127, 202, 127);
 }

@@ -1,7 +1,9 @@
 import './App.css'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from '../src/pages/Home'
-import Footer from '../src/components/Footer'
+import Navbar from './components/Navbar';
+import HungerBar from '../src/components/hungerBar'
+import Options from './components/Options';
 /*
 import reactLogo from './assets/react.svg'
 <img width="60px" src="/vite.svg" className="logo" alt="Vite logo" />
@@ -12,11 +14,12 @@ function App() {
 
   return (
     <Router>
-      <p>Navbar</p>
+      <Navbar/>
+      <Options/>
       <Routes>
         <Route path='/' exact element={<Home/>}/>
       </Routes>
-      <Footer/>
+      <HungerBar/>
     </Router>
   )
 }
