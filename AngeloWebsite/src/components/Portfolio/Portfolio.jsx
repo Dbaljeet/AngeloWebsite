@@ -1,13 +1,21 @@
 import React from "react";
-import { Background } from "../Containers";
+import PYTYM from '../../assets/PYTYM.png'
+import { IMG } from "./styles";
+import { Background , ContentPortfolio} from "../Containers";
 const Portfolio = () =>{
     return(
         <>
             <h1>Portfolio</h1>
             <Background>
-                <p>A</p>
-                <p>A</p>
-                <p>A</p>
+                <ContentPortfolio>
+                        <IMG src={PYTYM} alt="PYTYM project" />
+                </ContentPortfolio>
+                <ContentPortfolio>
+                        <IMG src={PYTYM} alt="PYTYM project" />
+                </ContentPortfolio>
+                <ContentPortfolio>
+                        <IMG src={PYTYM} alt="PYTYM project" />
+                </ContentPortfolio>
             </Background>
             
         </>

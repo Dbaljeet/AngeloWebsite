@@ -4,12 +4,15 @@ import styled from "styled-components";
 
 export const Background = styled.section `
   background-color:#1f1e1e;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  margin-bottom:60PX;
+  @media screen and (min-width: 622px){
+    display:grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: 2fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    margin-bottom:60PX;
+  }
+  
 `
 
 export const ContainRef = styled.section`
@@ -20,4 +23,18 @@ export const ContainRef = styled.section`
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+`
+
+export const ContentRef = styled.div`
+  min-height: 200px;
+  min-width: 100px;
+  width:100%;
+  height:auto;
+`
+
+export const ContentPortfolio = styled.div`
+  min-height: 200px;
+  min-width: 100px;
+  width:100%;
+  height:auto;
 `
