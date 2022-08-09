@@ -1,16 +1,13 @@
 import React from "react";
-import {PrincipalTitle, About} from '../components/Title'
+import {PrincipalTitle} from '../components/Titles'
+import Portfolio from "../components/Portfolio/Portfolio";
+import About from "../components/About";
 const Home = () =>{
     return (
         <>
-            
             <PrincipalTitle>Angelo Berrios Pinto</PrincipalTitle>
-            <About>
-                Studying at university 
-            </About>
-            'Civil engineering in computing and informatics'
-            
-
+            <About></About>
+            <Portfolio></Portfolio>
             <br></br><br></br><br></br><br></br><br></br><br></br>
             <br></br><br></br><br></br><br></br><br></br><br></br>
             <br></br><br></br><br></br><br></br><br></br><br></br>

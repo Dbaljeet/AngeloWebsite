@@ -6,7 +6,7 @@ export const PrincipalTitle = styled.h1`
     padding: 20px 100px;
     //-webkit-text-stroke: 0.1px #000;
 `
-export const About = styled.h2`
+export const AboutInf = styled.h2`
     color:#fff;
     
 `
