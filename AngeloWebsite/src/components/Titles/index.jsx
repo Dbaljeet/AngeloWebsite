@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 export const PrincipalTitle = styled.h1`
-    color:#fff;
+    color: ${props => props.colorRef};
     background-color:#b2d1b5;
     display:inline-block;
     padding: 20px 100px;
@@ -9,4 +9,11 @@ export const PrincipalTitle = styled.h1`
 export const AboutInf = styled.h2`
     color:#fff;
     
+`
+
+export const  SecondaryTitle = styled.h2`
+    color: ${props => props.colorRef};
+    background-color:#b2d1b5;
+    display:block;
+    padding: 20px 100px;
 `
