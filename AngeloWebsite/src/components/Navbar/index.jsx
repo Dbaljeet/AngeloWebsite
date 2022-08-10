@@ -13,11 +13,11 @@ const Navbar = () =>{
     return(
         <>
             
-            <Nav open={show}>
-                <Hamburger onClick={ShowMenu}>
-                    {show ?
-                    'Click close Menu': 'Click open Menu'
-                    }
+            <Nav className='burguer' open={show}>
+                <Hamburger id={`${show ? 'open' : ''}`} onClick={ShowMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </Hamburger>
                 <Lista className={`${show? 'active':'desactive'}`}>
                     <Links onClick={ShowMenu} href="#Start">Start</Links>

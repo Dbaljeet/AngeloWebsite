@@ -60,19 +60,63 @@ export const Lista = styled.ul`
         }
     }
 `
-
 export const Hamburger = styled.div`
-    position:sticky;
-    height:20px;
-    font-size:20px;
-    cursor: pointer;
-    @media screen and (min-width: 622px){
-        display:none;
+    z-index:3;
+    display: none;
+    @media screen and (max-width: 622px){
+        width: 35px;
+        height: 30px;
+        margin: 10px 10px;
+        margin-top:25px;
+        position: absolute;
+        top:0;
+        right:0;
+        cursor: pointer;
+        display: inline-block;
+        span{
+            background-color:#fff;
+            position: absolute;
+            border-radius: 2px;
+            transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+            width:100%;
+            height: 4px;
+            transition-duration: 500ms
+        }
+        span:nth-child(1){
+            top:0px;
+            left: 0px;
+        }
+        span:nth-child(2){
+            top:13px;
+            left: 0px;
+            opacity:1;
+        }
+        span:nth-child(3){
+            bottom:0px;
+            left: 0px;
+        }
+        :not(#open):hover span:nth-child(1){
+            transform: scaleX(.8);
+        }
+        :not(#open):hover span:nth-child(2){
+            transform: scaleX(.5);
+        }
+        :not(#open):hover span:nth-child(3){
+            transform: scaleX(.8);
+        }
+        &#open span:nth-child(1){
+            transform: rotate(45deg);
+            top: 13px;
+        }
+        &#open span:nth-child(2){
+            opacity:0;
+        }
+        &#open span:nth-child(3){
+            transform: rotate(-45deg);
+            top: 13px;
+        }
     }
-    :hover{
-        color:#e93636;
-    }
-`
+`;
 
 
 export const Links = styled.a`
