@@ -11,7 +11,7 @@ const Home = () =>{
             <About></About>
             <Portfolio></Portfolio>
             <Contact></Contact>
-            <Referentes></Referentes>
+            <Referentes ></Referentes>
             <br></br><br></br><br></br><br></br><br></br><br></br>
             <br></br><br></br><br></br><br></br><br></br><br></br>
             <br></br><br></br><br></br><br></br><br></br><br></br>

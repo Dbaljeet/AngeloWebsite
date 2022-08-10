@@ -5,11 +5,11 @@ import {IMG} from '../Referentes/styles'
 const Referentes = () =>{
     return(
         <>
-        <SecondaryTitle colorRef="#003a60">Referentes</SecondaryTitle>
+        <SecondaryTitle id="Men" colorRef="#003a60">Referentes</SecondaryTitle>
         <ContainRef>
             <div>
                 <h2>MIdu</h2>
-                <IMG onError="this.remove()" src="https://avatars.githubusercontent.com/u/1561955?v=4" alt="midudev"/>
+                <IMG onError={()=>parentNode.removeChild()} src="https://avatars.githubusercontent.com/u/1561955?v=4" alt="midudev"/>
             </div>
             
             <h2>MIdu</h2>

@@ -11,8 +11,26 @@ export const Background = styled.section `
     grid-column-gap: 15px;
     grid-row-gap: 0px;
     margin-bottom:60PX;
+    padding:20px;
+  }
+
+  @media screen and (max-width: 622px){
+    display:flex;
+    flex-wrap:wrap;
+    margin:20px;
   }
   
+`
+
+
+export const ContentPortfolio = styled.div`
+  min-height: 200px;
+  min-width: 250px;
+  width:100%;
+  height:auto;
+  @media screen and (max-width: 622px){
+    margin:20px;
+  }
 `
 
 export const ContainRef = styled.section`
@@ -32,9 +50,3 @@ export const ContentRef = styled.div`
   height:auto;
 `
 
-export const ContentPortfolio = styled.div`
-  min-height: 200px;
-  min-width: 100px;
-  width:100%;
-  height:auto;
-`

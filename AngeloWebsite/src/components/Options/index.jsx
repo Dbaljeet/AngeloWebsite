@@ -2,7 +2,7 @@ import React from "react"
 const Options = () =>{
     return (
         <>
-        <h2>
+        <h2 id="Start" >
             Light mode
             Dark mode
 
