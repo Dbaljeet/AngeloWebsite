@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 const Home = () =>{
     return (
         <>
-            <PrincipalTitle>Angelo Berrios Pinto</PrincipalTitle>
+            <PrincipalTitle colorRef="#fff">Angelo Berrios Pinto</PrincipalTitle>
             <About></About>
             <Portfolio></Portfolio>
             <Contact></Contact>

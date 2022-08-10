@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import ScrollYContext from '../../Context/ScrollYContext' 
-import { Nav , Lista, Links} from "./stylesNavbar";
+import { Nav , Lista, Links, Hamburger} from "./stylesNavbar";
 const Navbar = () =>{
     const [show, setShow] = useState(false)
     const ShowMenu = () =>{
@@ -12,14 +12,19 @@ const Navbar = () =>{
 
     return(
         <>
-            <div onClick={ShowMenu}>Click</div>
-            <Nav>
+            
+            <Nav open={show}>
+                <Hamburger onClick={ShowMenu}>
+                    {show ?
+                    'Click close Menu': 'Click open Menu'
+                    }
+                </Hamburger>
                 <Lista className={`${show? 'active':'desactive'}`}>
-                    <Links href="#Start">Start</Links>
-                    <Links href="#About">About</Links>  
-                    <Links href="#Portfolio">Portfolio</Links>    
-                    <Links href="#Contact">Contact me</Links>  
-                    <Links href="#Men">Men</Links>  
+                    <Links onClick={ShowMenu} href="#Start">Start</Links>
+                    <Links onClick={ShowMenu} href="#About">About</Links>  
+                    <Links onClick={ShowMenu} href="#Portfolio">Portfolio</Links>    
+                    <Links onClick={ShowMenu} href="#Contact">Contact me</Links>  
+                    <Links onClick={ShowMenu} href="#Men">Men</Links>  
                 </Lista>
             </Nav>
         </>

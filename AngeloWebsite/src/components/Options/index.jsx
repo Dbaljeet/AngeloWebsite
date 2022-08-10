@@ -1,14 +1,15 @@
 import React from "react"
+import { ContainerOption } from "./styles"
 const Options = () =>{
     return (
         <>
-        <h2 id="Start" >
+        <ContainerOption id="Start" >
             Light mode
             Dark mode
 
             En
             Es
-        </h2>
+        </ContainerOption>
         </>
     )
 }
