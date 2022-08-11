@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import {Link} from 'react-scroll'
 export const Nav = styled.nav`
+    z-index:99;
     position:sticky;
     top:0;
     height:auto;
@@ -119,12 +121,16 @@ export const Hamburger = styled.div`
 `;
 
 
-export const Links = styled.a`
-    
+export const Links = styled(Link)`
+    cursor:pointer;
     text-decoration:none;
     color:#fff;
     padding: 10px 55px;
     
+    &.active{
+        color:#f0094a;
+    }
+
     :hover{
         color:#120733;
         background-color:#fff;

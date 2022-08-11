@@ -10,7 +10,6 @@ export const PrincipalTitle = styled.h1`
 `
 export const AboutInf = styled.h2`
     color:#fff;
-    
 `
 
 export const  SecondaryTitle = styled.h2`

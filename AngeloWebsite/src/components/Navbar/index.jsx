@@ -20,11 +20,10 @@ const Navbar = () =>{
                     <span></span>
                 </Hamburger>
                 <Lista className={`${show? 'active':'desactive'}`}>
-                    <Links onClick={ShowMenu} href="#Start">Start</Links>
-                    <Links onClick={ShowMenu} href="#About">About</Links>  
-                    <Links onClick={ShowMenu} href="#Portfolio">Portfolio</Links>    
-                    <Links onClick={ShowMenu} href="#Contact">Contact me</Links>  
-                    <Links onClick={ShowMenu} href="#Men">Men</Links>  
+                    <Links onClick={ShowMenu} to="Home" spy={true} smooth={true} offset={-100} duration={500}>Inicio</Links> 
+                    <Links onClick={ShowMenu} to="Portfolio" spy={true} smooth={true} offset={-50} duration={500}>Portfolio</Links>    
+                    <Links onClick={ShowMenu} to="Contact" spy={true} smooth={true} offset={-60} duration={500}>Contacto</Links>  
+                    <Links onClick={ShowMenu} to="Ref" spy={true} smooth={true} offset={-60} duration={500}>Referentes</Links>
                 </Lista>
             </Nav>
         </>

@@ -5,8 +5,9 @@ const About = () =>{
         <>
             <AboutInf>
                 Studying at university 'Civil engineering in computing and informatics'
+                , I'm 22 year old
             </AboutInf>
-            22 year old
+            
             
 
         </>

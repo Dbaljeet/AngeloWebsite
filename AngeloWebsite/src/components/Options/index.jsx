@@ -3,12 +3,14 @@ import { ContainerOption } from "./styles"
 const Options = () =>{
     return (
         <>
-        <ContainerOption id="Start" >
+        <ContainerOption >
             Light mode
             Dark mode
 
             En
             Es
+
+            (aún no implementado)
         </ContainerOption>
         </>
     )

@@ -5,6 +5,7 @@ import {IMG} from '../Referentes/styles'
 const Referentes = () =>{
     return(
         <>
+        <div id="Ref">
         <SecondaryTitle id="Men" colorRef="#003a60">Referentes</SecondaryTitle>
         <ContainRef>
             <div>
@@ -17,6 +18,7 @@ const Referentes = () =>{
             <h2>MIdu</h2>
             <h2>MIdu</h2>
         </ContainRef>
+        </div>
         </>
     )
 }
