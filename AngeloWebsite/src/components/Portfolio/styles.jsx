@@ -9,9 +9,18 @@ export const ContentScroll = styled.div`
 
 export const IMG = styled.img`
     object-fit:contain;
-    max-width:100%;
-    
-    &#first{
+    max-width:500px;
+    width:100%;
+    height:auto;
+    opacity:0;
+    transition: 1s;
+    &.loaded{
+      opacity:1;
+    }
+`
+
+/*
+&#first{
         opacity: 0.4;
         transform:translate3d(20px,0,0);
     }
@@ -23,9 +32,6 @@ export const IMG = styled.img`
         opacity: 0.4;
 
     }
-    
-`
-/*
  grid-column-start: 1;
  grid-column-end:2;
 */

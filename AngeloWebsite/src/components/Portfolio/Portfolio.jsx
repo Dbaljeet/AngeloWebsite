@@ -1,8 +1,43 @@
 import React, {useState, useRef, useEffect} from "react";
 import PYTYM from '../../assets/PYTYM.png'
+import trutro from '../../assets/trutro.png'
 import { IMG ,  ContentPortfolio, Background, ContentScroll} from "./styles";
 const Portfolio = () =>{
-    const Img1 = useRef(null)
+    const images = [PYTYM,trutro,PYTYM]
+    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [selectedImage, setSelectedImage] = useState(images[0])
+    const [loaded, setLoaded] = useState(false)
+    const selectNewImage = (selectedIndex, images, next=true) => {
+        setLoaded(false)
+        const condition = next ? selectedIndex < images.length - 1 : selectedIndex > 0
+        const nextIndex =
+            next ? condition ? selectedIndex +1 : 0
+            :
+            condition ? selectedIndex - 1 : images.length - 1
+        
+            setSelectedImage(images[nextIndex])
+            setSelectedIndex(nextIndex)
+    };
+    const Previous = () =>{
+        selectNewImage(selectedIndex, images, false)
+    }
+
+    const Next = () =>{
+        selectNewImage(selectedIndex, images)
+    }
+    
+    return(
+        <>
+            <IMG src={`${selectedImage}`} alt="img1" className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
+            <button onClick={Previous}> {'<'} </button>
+            <button onClick={Next}> {'>'} </button>
+        </>
+    )
+}
+export default Portfolio
+
+/*
+const Img1 = useRef(null)
     const Img2 = useRef(null)
     const [click, setClick] = useState({
         port1:false,port2:false, port3:false
@@ -13,8 +48,13 @@ const Portfolio = () =>{
         Img2.current.id = 'first'
         
     }
-    return(
-        <>
+
+*/
+
+
+
+/*
+<>
         <ContentScroll id="Portfolio">
             <h2>Portfolio</h2>
             <Background>
@@ -30,6 +70,5 @@ const Portfolio = () =>{
             </Background>
         </ContentScroll> 
         </>
-    )
-}
-export default Portfolio
+
+*/
