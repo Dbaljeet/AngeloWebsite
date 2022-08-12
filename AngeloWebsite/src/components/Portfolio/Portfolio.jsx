@@ -3,21 +3,66 @@ import PYTYM from '../../assets/PYTYM.png'
 import trutro from '../../assets/trutro.png'
 import { IMG ,  ContentPortfolio, Background, ContentScroll} from "./styles";
 const Portfolio = () =>{
-    const images = [PYTYM,trutro,PYTYM]
+    const images = [PYTYM,trutro,'https://pbs.twimg.com/profile_images/1487666635959947264/YmXr1AtO_400x400.jpg']
+    const LENGTH = images.length
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedImage, setSelectedImage] = useState(images[0])
+
+    const [previousIndex,setPreviousIndex] = useState(LENGTH)
+    const [previousImage, setPreviousImage] = useState(images[LENGTH-1])
+
+    const [nextImage, setNextImage] = useState(images[1])
+    const [nextIndex, setNextIndex] = useState(images[1])
+
     const [loaded, setLoaded] = useState(false)
     const selectNewImage = (selectedIndex, images, next=true) => {
         setLoaded(false)
-        const condition = next ? selectedIndex < images.length - 1 : selectedIndex > 0
+        const condition = next ? selectedIndex < LENGTH - 1 : selectedIndex > 0
         const nextIndex =
             next ? condition ? selectedIndex +1 : 0
             :
-            condition ? selectedIndex - 1 : images.length - 1
-        
+            condition ? selectedIndex - 1 : LENGTH - 1
+
             setSelectedImage(images[nextIndex])
             setSelectedIndex(nextIndex)
+
+            /*
+            if ( nextIndex == 0 ){
+                setPreviousIndex(LENGTH - 1)
+                setPreviousImage(images[LENGTH - 1])
+                setNextImage[ 1 ]
+            }else{
+                setPreviousIndex(nextIndex - 1)
+                setPreviousImage(images[nextIndex - 1])
+                
+            }
+
+            if ( nextIndex == LENGTH - 1){
+                setNextImage(images[0])
+            }else{
+                setNextImage(images[nextIndex + 1])
+            }*/
+            
     };
+    useEffect(() => {
+        if ( selectedIndex == 0 ){
+            setPreviousIndex(LENGTH - 1)
+            setPreviousImage(images[LENGTH - 1])
+            setNextImage[ 1 ]
+        }else{
+            setPreviousIndex(selectedIndex - 1)
+            setPreviousImage(images[selectedIndex - 1])
+            
+        }
+
+        if ( selectedIndex == LENGTH - 1){
+            setNextImage(images[0])
+        }else{
+            setNextImage(images[selectedIndex + 1])
+        }
+    }, [selectedIndex]);
+
+
     const Previous = () =>{
         selectNewImage(selectedIndex, images, false)
     }
@@ -28,9 +73,13 @@ const Portfolio = () =>{
     
     return(
         <>
-            <IMG src={`${selectedImage}`} alt="img1" className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
-            <button onClick={Previous}> {'<'} </button>
-            <button onClick={Next}> {'>'} </button>
+        <Background>
+            <IMG loading="lazy" src={`${previousImage}`} alt="img1" onClick={Previous} className="carr"/>
+            <IMG loading="lazy" src={`${selectedImage}`} alt="img2" className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
+            <IMG loading="lazy" src={`${nextImage}`} alt="img3" onClick={Next} className="carr"/>
+        </Background>
+        <button onClick={Previous}> {'<'} </button>
+        <button onClick={Next}> {'>'} </button>
         </>
     )
 }

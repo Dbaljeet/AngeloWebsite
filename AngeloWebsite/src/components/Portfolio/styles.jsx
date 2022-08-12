@@ -8,14 +8,20 @@ export const ContentScroll = styled.div`
 
 
 export const IMG = styled.img`
-    object-fit:contain;
+    object-fit:cover;
     max-width:500px;
     width:100%;
-    height:auto;
     opacity:0;
     transition: 1s;
     &.loaded{
       opacity:1;
+      align-self:center;
+    }
+    &.carr{
+      object-fit:cover;
+      opacity:0.5;
+      width:200px;
+      max-height:450px;
     }
 `
 
@@ -54,12 +60,19 @@ export const Background = styled.section `
     grid-column-gap: 15px;
     grid-row-gap: 0px;
     padding:20px;
+    height:500px;
+    justify-items:center;
   }
 
   @media screen and (max-width: 622px){
-    display:flex;
-    flex-wrap:wrap;
-    margin:20px;
+    display:grid;
+    grid-template-columns:1fr 2fr 1fr;
+    grid-template-rows: 2fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    padding:20px;
+    height:500px;
+    justify-items:center;
   }
   
 `
