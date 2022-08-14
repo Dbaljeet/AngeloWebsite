@@ -73,7 +73,7 @@ const Portfolio = () =>{
     
     return(
         <>
-        <Background>
+        <Background id = "Portfolio">
             <IMG loading="lazy" src={`${previousImage}`} alt="img1" onClick={Previous} className="carr"/>
             <IMG loading="lazy" src={`${selectedImage}`} alt="img2" className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
             <IMG loading="lazy" src={`${nextImage}`} alt="img3" onClick={Next} className="carr"/>
