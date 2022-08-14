@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const ContentScroll = styled.div`
     margin: 50px 0;
@@ -10,19 +10,35 @@ export const ContentScroll = styled.div`
 export const IMG = styled.img`
     object-fit:cover;
     max-width:500px;
+    min-width:200px;
     width:100%;
     opacity:0;
-    transition: 1s;
+    transition: all 1s;
+    align-self:center;
     &.loaded{
       opacity:1;
       align-self:center;
     }
     &.carr{
       object-fit:cover;
-      opacity:0.5;
-      width:200px;
+      opacity:0.2;
+      width:1fr;
+      min-width:60px;
       max-height:450px;
+      cursor: pointer;
+      &:hover{
+        animation: op 2s ease 0.2s 1;
+      }
     }
+
+  @keyframes op {
+    from {
+      opacity:0.2;
+    }
+    to {
+      opacity:0.6
+    }
+}
 `
 
 /*
@@ -52,7 +68,7 @@ export const ContentPortfolio = styled.div`
 `
 
 export const Background = styled.section `
-  background-color:#1f1e1e;
+  border: 10px solid #1f1e1e;
   @media screen and (min-width: 622px){
     display:grid;
     grid-template-columns:2fr 4fr 2fr;
@@ -70,8 +86,8 @@ export const Background = styled.section `
     grid-template-rows: 2fr;
     grid-column-gap: 15px;
     grid-row-gap: 0px;
-    padding:20px;
-    height:500px;
+    
+    
     justify-items:center;
   }
   
