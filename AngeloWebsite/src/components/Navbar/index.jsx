@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import ScrollYContext from '../../Context/ScrollYContext' 
 import { Nav , Lista, Links, Hamburger} from "./stylesNavbar";
 const Navbar = () =>{
     const [show, setShow] = useState(false)

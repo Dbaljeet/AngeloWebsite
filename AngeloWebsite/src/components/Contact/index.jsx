@@ -5,6 +5,7 @@ const Contact = () =>{
         <>
             <ContentScroll id="Contact">
                 <h2>Contacto</h2>
+                <h3>Linkedin</h3>
                 <h3>github</h3>
                 <h3>correo</h3>
                 <h3>twitter</h3>

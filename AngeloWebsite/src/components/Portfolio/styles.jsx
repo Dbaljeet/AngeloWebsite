@@ -5,9 +5,14 @@ export const ContentScroll = styled.div`
     width:100%;
     height:auto;
 `
-
+export const Section = styled.section`
+  outline: 6px solid #1f1e1e;
+  padding:10px 0;
+  width:100%;
+`
 
 export const IMG = styled.img`
+    cursor: pointer;
     object-fit:cover;
     max-width:500px;
     min-width:200px;
@@ -26,7 +31,6 @@ export const IMG = styled.img`
       width:1fr;
       min-width:40px;
       max-height:450px;
-      cursor: pointer;
       @media screen and (max-width: 622px) {
         width:3em;
       }
@@ -54,7 +58,6 @@ export const ContentPortfolio = styled.div`
 `
 
 export const Background = styled.section `
-  border: 10px solid #1f1e1e;
   @media screen and (min-width: 622px){
     display:grid;
     grid-template-columns:2fr 4fr 2fr;

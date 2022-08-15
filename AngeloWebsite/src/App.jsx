@@ -3,9 +3,6 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from '../src/pages/Home'
 import Navbar from './components/Navbar';
 import HungerBar from '../src/components/hungerBar'
-import Options from './components/Options';
-import { ThemeProvider } from './Context/ThemeContext';
-import {ScrollYProvider} from './Context/ScrollYContext'
 /*
 import reactLogo from './assets/react.svg'
 <img width="60px" src="/vite.svg" className="logo" alt="Vite logo" />
@@ -16,15 +13,10 @@ function App() {
 
   return (
     <Router>
-      <ThemeProvider>
-        <ScrollYProvider>
         <Navbar/>
-        <Options/>
         <Routes>
           <Route path='/' exact element={<Home/>}/>
         </Routes>
-        </ScrollYProvider>
-      </ThemeProvider>
       <HungerBar/>
     </Router>
   )

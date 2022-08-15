@@ -64,3 +64,23 @@ body{
 *::selection{
   background-color: rgb(127, 202, 127);
 }
+
+.close {
+  width: 32px;
+  height: 40px;
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  content: ' ';
+  height: 33px;
+  width: 3px;
+  top: 10px;
+  background-color: rgb(255, 250, 250);
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
