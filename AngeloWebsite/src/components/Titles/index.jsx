@@ -8,9 +8,7 @@ export const PrincipalTitle = styled.h1`
     margin: 100px 0;
     //-webkit-text-stroke: 0.1px #000;
 `
-export const AboutInf = styled.h2`
-    color:#fff;
-`
+
 
 export const  SecondaryTitle = styled.h2`
     color: ${props => props.colorRef};
