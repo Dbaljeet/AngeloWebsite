@@ -23,7 +23,7 @@ export const IMG = styled.img`
     &.loaded{
       opacity:1;
       align-self:center;
-      animation : Spawn 1s ease 0s 1 normal;
+      animation : Spawn 1.5s ease 0s 1 normal;
     }
     &.carr{
       object-fit:cover;
@@ -47,15 +47,6 @@ export const IMG = styled.img`
 `
 
 
-export const ContentPortfolio = styled.div`
-  min-height: 200px;
-  min-width: 250px;
-  width:100%;
-  height:auto;
-  @media screen and (max-width: 622px){
-    margin:20px;
-  }
-`
 
 export const Background = styled.section `
   @media screen and (min-width: 622px){
@@ -76,8 +67,14 @@ export const Background = styled.section `
     grid-column-gap: 2px;
     grid-row-gap: 0px;
     
-    
     justify-items:center;
   }
   
+`
+
+export const ARROW = styled.img`
+  background-color:transparent;
+  cursor: pointer;
+  width:100px;
+  ${props=>props.left && 'transform:rotateY(3.142rad)'}
 `

@@ -1,11 +1,13 @@
 import React, {useState, useRef, useEffect} from "react";
 import PYTYM from '../../assets/PYTYM.png'
-import trutro from '../../assets/trutro.png'
-import { IMG , Background, Section} from "./styles";
+import GiphyAll from '../../assets/GiphyAll.png'
+import Arrow from '../../assets/Arrow.svg'
+import { IMG , Background, Section, ARROW} from "./styles";
+
 import {ModalPortalPortfolio} from '../Modals/PortfolioModal'
 import ContentPortfolio from './ContentModalPortfolio'
 const Portfolio = () =>{
-    const images = [PYTYM,trutro,'https://pbs.twimg.com/profile_images/1487666635959947264/YmXr1AtO_400x400.jpg',trutro]
+    const images = [ PYTYM ,GiphyAll ]
     const LENGTH = images.length
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedImage, setSelectedImage] = useState(images[0])
@@ -52,6 +54,13 @@ const Portfolio = () =>{
         }
     }, [selectedIndex]);
 
+    useEffect(() => {
+        const interval = setInterval(() =>{
+            selectNewImage(selectedIndex, images)
+        }, 5000)
+        return () => clearInterval(interval)
+    },);
+
     const Previous = () =>{
         selectNewImage(selectedIndex, images, false)
     }
@@ -81,8 +90,14 @@ const Portfolio = () =>{
             <div>
                 {where}
             </div>
-            <button onClick={Previous}> {'<'} </button>
-            <button onClick={Next}> {'>'} </button>
+            
+
+                <ARROW onClick={Previous} src={Arrow} left={true}></ARROW>
+
+
+
+                <ARROW onClick={Next} src={Arrow} left={false}></ARROW>
+
         </Section>
         </>
     )

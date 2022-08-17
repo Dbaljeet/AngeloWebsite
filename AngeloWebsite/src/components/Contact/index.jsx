@@ -10,15 +10,15 @@ const Contact = () =>{
             <ContentScroll id="Contact">
                 <SecondaryTitle>Contacto</SecondaryTitle>
                 <ContentContainer target='_blank' href="https://www.linkedin.com/in/angelo-berrios-pinto-96b317235/">
-                        <IMG src={Linkedin}></IMG>
+                        <IMG alt="Linkedin Angelo Berrios" src={Linkedin}></IMG>
                 </ContentContainer>
                 
                 <ContentContainer target="_blank" href="https://github.com/Dbaljeet">
-                    <IMG src={Github}></IMG>
+                    <IMG alt="github Angelo Berrios" src={Github}></IMG>
                 </ContentContainer>
                 
                 <ContentContainer>
-                    <IMG src={Mail}></IMG>
+                    <IMG alt="Mail Angelo Berrios" src={Mail}></IMG>
                 </ContentContainer>
 
             </ContentScroll>

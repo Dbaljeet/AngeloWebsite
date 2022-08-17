@@ -46,12 +46,11 @@ export const Nav = styled.nav`
     }
 `
 
-export const Lista = styled.ul`
+export const Lista = styled.div`
     width:100%;
     display:flex;
     justify-content:space-around;
     flex-wrap:wrap;
-
     @media screen and (max-width: 622px){
         display:none;
         &.active{
@@ -66,6 +65,7 @@ export const Hamburger = styled.div`
     z-index:3;
     display: none;
     @media screen and (max-width: 622px){
+        
         width: 35px;
         height: 30px;
         margin: 10px 10px;
@@ -75,6 +75,7 @@ export const Hamburger = styled.div`
         right:0;
         cursor: pointer;
         display: inline-block;
+        backdrop-filter: blur(3px);
         span{
             background-color:#fff;
             position: absolute;

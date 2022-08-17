@@ -6,6 +6,7 @@ export const ContentScroll = styled.div`
     outline: 6px solid #1f1e1e;
     display:flex;
     flex-direction:column;
+    margin: 10px 0;
 `
 export const ContentContainer = styled.a`
     margin:auto;
