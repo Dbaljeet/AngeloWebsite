@@ -48,11 +48,11 @@ const Footer = () =>{
     return(
         <>
         <HUDminecraft> 
-            <Hunger active = {actives.active1}></Hunger>
-            <Hunger active = {actives.active2}></Hunger>
-            <Hunger active = {actives.active3}></Hunger>
-            <Hunger active = {actives.active4}></Hunger>
-            <Hunger active = {actives.active5}></Hunger>
+            <Hunger alt="HungerBarMinecraft1" active = {actives.active1}></Hunger>
+            <Hunger alt="HungerBarMinecraft2" active = {actives.active2}></Hunger>
+            <Hunger alt="HungerBarMinecraft3" active = {actives.active3}></Hunger>
+            <Hunger alt="HungerBarMinecraft4" active = {actives.active4}></Hunger>
+            <Hunger alt="HungerBarMinecraft5" active = {actives.active5}></Hunger>
         </HUDminecraft>
         </>
     )

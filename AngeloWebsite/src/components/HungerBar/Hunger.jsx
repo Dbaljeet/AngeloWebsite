@@ -4,7 +4,7 @@ import { Img } from "./styles";
 const Hunger = ({active}) =>{
     return(
         <>
-            <Img alt="HungerBarMinecraft" className={`${active? 'active':''}`} src={trutro} alt="Hunger" /> 
+            <Img className={`${active? 'active':''}`} src={trutro} alt="Hunger" /> 
         </>
     )
 }
