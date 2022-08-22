@@ -13,7 +13,10 @@ const Referentes = () =>{
                 <IMG onError={()=>parentNode.removeChild()} src="https://avatars.githubusercontent.com/u/1561955?v=4" alt="midudev"/>
             </div>
             
-            <h2>MIdu</h2>
+            <div>
+                <h2>Nicolás Schürmann</h2>
+                <IMG onError={()=>parentNode.removeChild()} src="https://pbs.twimg.com/profile_images/1497701062991437824/evabz349_400x400.jpg" alt="Holamundo"/>
+            </div>
             <h2>MIdu</h2>
             <h2>MIdu</h2>
             <h2>MIdu</h2>

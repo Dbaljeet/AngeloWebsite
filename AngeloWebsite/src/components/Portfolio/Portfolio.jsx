@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from "react";
 import PYTYM from '../../assets/PYTYM.png'
 import GiphyAll from '../../assets/GiphyAll.png'
 import Arrow from '../../assets/Arrow.svg'
-import { IMG , Background, Section, ARROW} from "./styles";
+import { Figure, IMG , Background, Section, ARROW} from "./styles";
 import { SecondaryTitle } from '../Titles/index'
 
 import {ModalPortalPortfolio} from '../Modals/PortfolioModal'
@@ -79,14 +79,22 @@ const Portfolio = () =>{
         <Section id = "Portfolio">
             <SecondaryTitle>Portfolio</SecondaryTitle>
             <Background>
-                <IMG loading="lazy" src={`${previousImage}`} alt="img1" onClick={Previous} className="carr"/>
+                <Figure>
+                    <IMG loading="lazy" src={`${previousImage}`} alt="img1" onClick={Previous} className="carr"/>
+                </Figure>
+                <Figure>
                 <IMG loading="lazy" onClick={()=>setShowModal(true)} src={`${selectedImage}`} alt="img2" className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
+                </Figure>
+
                 { showModal &&
                 <ModalPortalPortfolio onClose={handleClose}>
                     <ContentPortfolio selectedIMG = {selectedImage}></ContentPortfolio>
                 </ModalPortalPortfolio>
                 }
-                <IMG loading="lazy" src={`${nextImage}`} alt="img3" onClick={Next} className="carr"/>
+
+                <Figure>
+                    <IMG loading="lazy" src={`${nextImage}`} alt="img3" onClick={Next} className="carr"/>
+                </Figure>
             </Background>
             <div>
                 {where}

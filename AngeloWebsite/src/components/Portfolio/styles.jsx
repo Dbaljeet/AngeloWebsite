@@ -22,7 +22,6 @@ export const IMG = styled.img`
     align-self:center;
     &.loaded{
       opacity:1;
-      align-self:center;
       animation : Spawn 1.5s ease 0s 1 normal;
     }
     &.carr{
@@ -46,7 +45,9 @@ export const IMG = styled.img`
     }
 `
 
-
+export const Figure = styled.figure`
+  align-self:center;
+`
 
 export const Background = styled.section `
   @media screen and (min-width: 622px){
