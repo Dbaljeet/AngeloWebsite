@@ -23,6 +23,7 @@ const ContainerContent = styled.div`
         flex-direction:column;
         align-items:center;
         gap:10px;
+        justify-content:space-evenly;
     }
 `
 
@@ -32,10 +33,10 @@ const Tittle = styled.h2`
 `
 const IMG = styled.img`
     width:20em;
-    margin:auto;
     @media screen and (min-width:622px){
         grid-area: 1 / 4 / 4 / 6;
         width:20em;
+        margin:auto;
     }
 `
 

@@ -31,7 +31,7 @@ export const IMG = styled.img`
       min-width:40px;
       max-height:450px;
       @media screen and (max-width: 622px) {
-        width:3em;
+        display:none;
       }
     }
   
@@ -63,7 +63,7 @@ export const Background = styled.section `
 
   @media screen and (max-width: 622px){
     display:grid;
-    grid-template-columns:1fr 2fr 1fr;
+    grid-template-columns:0.1fr 2fr 0.1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 2px;
     grid-row-gap: 0px;
