@@ -9,6 +9,12 @@ import {ModalPortalPortfolio} from '../Modals/PortfolioModal'
 import ContentPortfolio from './ContentModalPortfolio'
 const Portfolio = () =>{
     const images = [ PYTYM ,GiphyAll ]
+    const InfoRep = {
+        'names' : ['PYTYM', 'GiphyAll'],
+        'github': ['https://github.com/SouLKy/ProyectoSoftwareBasadoEnPlataforma', 'https://github.com/Dbaljeet/GiphyAllWeb'],
+        'deploy': ['','https://giphy-all-web.vercel.app'],
+        'info' : ['Proyecto donde se pueden cargar datos de una cuenta bancaria, más información en github','Es un proyecto donde se pueden visualizar gifs']
+    }
     const LENGTH = images.length
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedImage, setSelectedImage] = useState(images[0])
@@ -56,10 +62,12 @@ const Portfolio = () =>{
     }, [selectedIndex]);
 
     useEffect(() => {
-        const interval = setInterval(() =>{
+        if (!showModal){
+            const interval = setInterval(() =>{
             selectNewImage(selectedIndex, images)
-        }, 5000)
-        return () => clearInterval(interval)
+            }, 5000)
+            return () => clearInterval(interval)
+        }
     },);
 
     const Previous = () =>{
@@ -83,14 +91,10 @@ const Portfolio = () =>{
                     <IMG loading="lazy" src={`${previousImage}`} alt="img1" onClick={Previous} className="carr"/>
                 </Figure>
                 <Figure>
-                <IMG loading="lazy" onClick={()=>setShowModal(true)} src={`${selectedImage}`} alt="img2" className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
+                    <IMG loading="lazy" onClick={()=>setShowModal(true)} src={`${selectedImage}`} alt="img2" className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
                 </Figure>
 
-                { showModal &&
-                <ModalPortalPortfolio onClose={handleClose}>
-                    <ContentPortfolio selectedIMG = {selectedImage}></ContentPortfolio>
-                </ModalPortalPortfolio>
-                }
+                
 
                 <Figure>
                     <IMG loading="lazy" src={`${nextImage}`} alt="img3" onClick={Next} className="carr"/>
@@ -108,6 +112,13 @@ const Portfolio = () =>{
                 <ARROW onClick={Next} src={Arrow} left={false}></ARROW>
 
         </Section>
+
+        { showModal &&
+            <ModalPortalPortfolio onClose={handleClose}>
+            <ContentPortfolio selectedIMG = {images[selectedIndex]} Name = {InfoRep.names[selectedIndex]} Github = {InfoRep.github[selectedIndex]} deploy = {InfoRep.deploy[selectedIndex]} Info = {InfoRep.info[selectedIndex]} ></ContentPortfolio>
+            </ModalPortalPortfolio>
+        }
+
         </>
     )
 }

@@ -67,7 +67,7 @@ export const Background = styled.section `
     grid-template-rows: 1fr;
     grid-column-gap: 2px;
     grid-row-gap: 0px;
-    
+    min-height:400px;
     justify-items:center;
   }
   
