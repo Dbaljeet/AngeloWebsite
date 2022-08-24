@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContentScroll = styled.div`
     width:100%;
     height:auto;
-    outline: 6px solid #1f1e1e;
+    outline: 2px solid #b2d1b5;
     display:flex;
     flex-direction:column;
     margin: 10px 0;

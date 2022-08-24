@@ -38,6 +38,7 @@ const IMG = styled.img`
         width:20em;
         margin:auto;
     }
+    
 `
 
 const IMG2 = styled.img`

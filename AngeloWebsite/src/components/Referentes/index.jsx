@@ -9,7 +9,7 @@ const Referentes = () =>{
         <SecondaryTitle id="Men" colorRef="#003a60">Referentes</SecondaryTitle>
         <ContainRef>
             <div>
-                <h2>MIdu</h2>
+                <h2>Midudev</h2>
                 <IMG onError={()=>parentNode.removeChild()} src="https://avatars.githubusercontent.com/u/1561955?v=4" alt="midudev"/>
             </div>
             

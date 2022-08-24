@@ -2,31 +2,45 @@ import React from "react";
 import styled from 'styled-components'
 import { SecondaryTitle } from '../Titles/index'
 
+const P = styled.p`
+    margin-bottom:60px;
+    letter-spacing:1.5px;
+`
+
+const Section = styled.section`
+    margin-top:20px;
+`
+
 const Experience = () =>{
     return(
-        <>
+        <> 
+        <Section>
             <SecondaryTitle>Experiencias y conocimientos</SecondaryTitle>
-            Trabajo con base de datos (relacionales, no relaciones, multidimensionales).
+            <P>
+            Trabajo con base de datos (relacionales, no relacionales y multidimensionales).
             <br></br>
-            Conocimentos programación orientada a objetos
+            Conocimentos de programación orientada a objetos.
             <br></br>
-            Ingeniería de software, métodologia agile
+            Conocimientos de estructuras de datos.
             <br></br>
-            Data Science en Python (uso de libreria pandas)
+            Ingeniería de software, métodologia agile.
             <br></br>
-            Realización ETL (extract transform load)
+            Data Science con Python (uso de libreria pandas).
             <br></br>
-            realización de dos videojuegos en unity para asignatura universidad.
+            Realización ETL (extract transform load).
             <br></br>
-            Frontend (Javascript, Html, Css - React - Next)
+            Realización de dos videojuegos en unity para asignaturas de la universidad.
             <br></br>
-            Backend (Express)
+            Frontend ( Javascript, Html, Css - React - Next ).
             <br></br>
-
-            <SecondaryTitle>
-                Lenguajes de programación
-            </SecondaryTitle>
-            Javascript, Java, Python, Scheme
+            Backend ( Express ).
+            <br></br>
+            Javascript, Java, Python, C++, C# (por unity).
+            <br></br>
+            Scheme ( uso academico - programación funcional )
+            <br></br>
+            </P>
+        </Section>
             </>
     )
 }

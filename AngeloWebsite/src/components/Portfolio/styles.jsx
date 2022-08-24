@@ -6,7 +6,7 @@ export const ContentScroll = styled.div`
     height:auto;
 `
 export const Section = styled.section`
-  outline: 6px solid #1f1e1e;
+  outline: 2px solid #b2d1b5;
   padding:10px 0;
   width:100%;
 `

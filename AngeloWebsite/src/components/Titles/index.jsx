@@ -12,7 +12,6 @@ export const PrincipalTitle = styled.h1`
 
 export const  SecondaryTitle = styled.h2`
     color: ${props => props.colorRef};
-    background-color:#b2d1b5;
     display:block;
     padding: 20px 100px;
 `
