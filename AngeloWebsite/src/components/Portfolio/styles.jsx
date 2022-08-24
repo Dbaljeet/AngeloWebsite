@@ -6,18 +6,21 @@ export const ContentScroll = styled.div`
     height:auto;
 `
 export const Section = styled.section`
-  outline: 2px solid #b2d1b5;
   padding:10px 0;
   width:100%;
+  @media screen and (max-width: 622px) {
+    outline: 2px solid #b2d1b5;
+  }
 `
 
 export const IMG = styled.img`
+    z-index:1;
     cursor: pointer;
     object-fit:cover;
     max-width:500px;
     min-width:200px;
     width:100%;
-    opacity:0;
+    opacity:0.2;
     transition: Spawn 1s;
     align-self:center;
     &.loaded{
@@ -37,7 +40,7 @@ export const IMG = styled.img`
   
     @keyframes Spawn {
       from {
-        opacity: 0.2;
+        opacity: 0.5;
       }
       to {
         opacity: 1;

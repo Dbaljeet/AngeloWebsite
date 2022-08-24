@@ -90,7 +90,7 @@ const Portfolio = () =>{
                 <Figure>
                     <IMG loading="lazy" src={`${previousImage}`} alt="img1" onClick={Previous} className="carr"/>
                 </Figure>
-                <Figure>
+                <Figure className="FigureCenter">
                     <IMG loading="lazy" onClick={()=>setShowModal(true)} src={`${selectedImage}`} alt="img2" className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
                 </Figure>
 
