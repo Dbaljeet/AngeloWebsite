@@ -16,8 +16,8 @@ export const Nav = styled.nav`
     justify-content:space-around;
     border-bottom: 1px solid #c0c0c0;
     @media screen and (max-width: 622px){
-        font-size:12px;
-        background-color:${props=>props.open? '#366da0' : '#000'};
+        font-size:2.5rem;
+        background-color:${props=>props.open? '#508376' : '#000'};
     }
     @media screen and (min-width: 622px){
         backdrop-filter: blur(20px);

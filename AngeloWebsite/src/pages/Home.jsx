@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {PrincipalTitle} from '../components/Titles'
+import {PrincipalTitle, ButtonShowMore} from '../components/Titles'
 import Portfolio from "../components/Portfolio/Portfolio";
 import About from "../components/About";
 import Referentes from "../components/Referentes";
@@ -17,13 +17,10 @@ const Home = () =>{
             <Experience></Experience>
             <Contact></Contact>
             
-            <h2 onClick={()=>setClicked(true)}>Extras</h2>
+            <ButtonShowMore id='Ref' onClick={()=>setClicked(true)}>Más sobre mí</ButtonShowMore>
             { clicked &&
                 <Referentes ></Referentes>
             }
-            <br></br><br></br><br></br><br></br><br></br><br></br>
-            <br></br><br></br><br></br><br></br><br></br><br></br>
-            <br></br><br></br><br></br><br></br><br></br><br></br>
         </>
     )
 }

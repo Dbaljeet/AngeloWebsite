@@ -18,3 +18,11 @@ export const  SecondaryTitle = styled.h2`
     padding: 0px;
     font-size:2.5rem;
 `
+
+export const ButtonShowMore = styled.button`
+    background-color:transparent;
+    border:2px solid #b2d1b5;
+    font-size:3rem;
+    padding:3rem;
+    cursor: pointer;
+`

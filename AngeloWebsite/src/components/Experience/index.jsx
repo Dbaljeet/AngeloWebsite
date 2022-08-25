@@ -2,9 +2,9 @@ import React from "react";
 import styled from 'styled-components'
 import { SecondaryTitle } from '../Titles/index'
 
-const P = styled.p`
-    margin-bottom:60px;
+const Element = styled.li`
     letter-spacing:1.5px;
+    list-style:none;
 `
 
 const Section = styled.section`
@@ -16,30 +16,42 @@ const Experience = () =>{
         <> 
         <Section>
             <SecondaryTitle>Experiencias y conocimientos</SecondaryTitle>
-            <P>
-            Trabajo con base de datos (relacionales, no relacionales y multidimensionales).
-            <br></br>
-            Conocimentos de programación orientada a objetos.
-            <br></br>
-            Conocimientos de estructuras de datos.
-            <br></br>
-            Ingeniería de software, métodologia agile.
-            <br></br>
-            Data Science con Python (uso de libreria pandas).
-            <br></br>
-            Realización ETL (extract transform load).
-            <br></br>
-            Realización de dos videojuegos en unity para asignaturas de la universidad.
-            <br></br>
-            Frontend ( Javascript, Html, Css - React - Next ).
-            <br></br>
-            Backend ( Express ).
-            <br></br>
-            Javascript, Java, Python, C++, C# (por unity).
-            <br></br>
-            Scheme ( uso academico - programación funcional )
-            <br></br>
-            </P>
+
+            <lu>
+                <Element>
+                    Trabajo con base de datos (relacionales, no relacionales y multidimensionales).
+                </Element>
+                <Element>
+                    Conocimentos de programación orientada a objetos.
+                </Element>
+                <Element>
+                    Conocimientos de estructuras de datos.
+                </Element>
+                <Element>
+                    Ingeniería de software, métodologia agile.
+                </Element>
+                <Element>
+                    Data Science con Python (uso de Elementbreria pandas).
+                </Element>
+                <Element>
+                    ReaElementzación ETL (extract transform load).
+                </Element>
+                <Element>
+                    ReaElementzación de dos videojuegos en unity para asignaturas de la universidad.
+                </Element>
+                <Element>
+                    Frontend ( Javascript, Html, Css - React - Next ).
+                </Element>
+                <Element>
+                    Backend ( Express ).
+                </Element>
+                <Element>
+                    Javascript, Java, Python, C++, C# (por unity).
+                </Element>
+                <Element>
+                    Scheme ( uso academico - programación funcional )
+                </Element>
+            </lu>
         </Section>
             </>
     )
