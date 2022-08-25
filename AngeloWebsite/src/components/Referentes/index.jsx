@@ -1,30 +1,26 @@
 import React from "react";
 import { SecondaryTitle } from "../Titles";
 import { ContainRef } from "../Containers";
-import {IMG} from '../Referentes/styles'
-import styled from "styled-components";
-
-const Label = styled.label`
-    font-size:2rem;
-`
+import Referente from "../Referente";
 
 const Referentes = () =>{
+
+    const info = [
+        {name:"midudev",image:"https://avatars.githubusercontent.com/u/1561955?v=4"},
+        {name:"HolaMundo",image:"https://pbs.twimg.com/profile_images/1497701062991437824/evabz349_400x400.jpg"},
+        
+    ]
+
     return(
         <>
-        <div>
-        <SecondaryTitle id="Men" colorRef="#003a60">Referentes</SecondaryTitle>
+        <SecondaryTitle id="Men">Referentes</SecondaryTitle>
         <ContainRef>
-            <div>
-                <Label>Midudev</Label>
-                <IMG onError={()=>parentNode.removeChild()} src="https://avatars.githubusercontent.com/u/1561955?v=4" alt="midudev"/>
-            </div>
-            
-            <div>
-                <Label>Nicolás Schürmann</Label>
-                <IMG onError={()=>parentNode.removeChild()} src="https://pbs.twimg.com/profile_images/1497701062991437824/evabz349_400x400.jpg" alt="Holamundo"/>
-            </div>
+            {
+            info.map (( { name , image} ) => 
+                <Referente key={name} name={name} image={image}/>
+            )
+            }
         </ContainRef>
-        </div>
         </>
     )
 }

@@ -1,13 +1,25 @@
 import styled from "styled-components";
 
 export const ContainRef = styled.section`
-  background-color:#1f1e1e;
+  
+  
   color:#fff;
-  display:grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  @media screen and (min-width:622px){
+    display:grid;
+    grid-template-columns: repeat(2, 15rem);
+    grid-template-rows: 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 0px;
+    justify-content:center;
+    padding: 40px 0;
+  }
+  @media screen and (max-width:622px){
+    display:flex;
+    flex-direction:column;
+    gap:3rem;
+    padding: 10px 0;
+  }
+  
 `
 
 export const ContentRef = styled.div`

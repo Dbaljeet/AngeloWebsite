@@ -121,7 +121,7 @@ body{
 .FigureCenter::after {
   position: absolute;
   content: "";
-  top: 20px;
+  top: 120px;
   left: 0;
   right: 0;
   z-index: -1;
