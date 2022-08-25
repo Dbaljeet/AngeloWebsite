@@ -17,7 +17,7 @@ const Experience = () =>{
         <Section>
             <SecondaryTitle>Experiencias y conocimientos</SecondaryTitle>
 
-            <lu>
+            <ul>
                 <Element>
                     Trabajo con base de datos (relacionales, no relacionales y multidimensionales).
                 </Element>
@@ -51,7 +51,7 @@ const Experience = () =>{
                 <Element>
                     Scheme ( uso academico - programación funcional )
                 </Element>
-            </lu>
+            </ul>
         </Section>
             </>
     )

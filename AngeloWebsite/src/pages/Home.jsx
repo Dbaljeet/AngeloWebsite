@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import {PrincipalTitle, ButtonShowMore} from '../components/Titles'
 import Portfolio from "../components/Portfolio/Portfolio";
 import About from "../components/About";
-import Referentes from "../components/Referentes";
 import Contact from "../components/Contact";
 import Experience from '../components/Experience'
+import MoreInfo from "../components/MoreInfo";
 const Home = () =>{
-    const [ clicked, setClicked ] = useState ( false )
     return (
         <>
             <div id="Home">
@@ -16,11 +15,8 @@ const Home = () =>{
             <Portfolio></Portfolio>
             <Experience></Experience>
             <Contact></Contact>
+            <MoreInfo></MoreInfo>
             
-            <ButtonShowMore id='Ref' onClick={()=>setClicked(true)}>Más sobre mí</ButtonShowMore>
-            { clicked &&
-                <Referentes ></Referentes>
-            }
         </>
     )
 }

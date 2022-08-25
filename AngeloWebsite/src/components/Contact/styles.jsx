@@ -5,7 +5,7 @@ export const ContentScroll = styled.div`
     height:auto;
     display:flex;
     flex-direction:column;
-    margin: 10px 0 100px 0;
+    margin: 70px 0 100px 0;
     @media screen and (max-width: 622px){
         outline: 2px solid #b2d1b5;
     }
