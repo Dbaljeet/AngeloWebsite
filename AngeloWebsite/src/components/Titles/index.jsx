@@ -15,6 +15,6 @@ export const  SecondaryTitle = styled.h2`
     text-align:center;
     color: ${props => props.colorRef};
     display:block;
-    padding: 5px 0px;
+    padding: 0px;
     font-size:2.5rem;
 `

@@ -17,7 +17,7 @@ const Contact = () =>{
                     <IMG title="github" alt="github Angelo Berrios" src={Github}></IMG>
                 </ContentContainer>
                 
-                <ContentContainer>
+                <ContentContainer target="_blank" href="mailto:angelo.berrios99@gmail.com">
                     <IMG title="Correo contacto" alt="Mail Angelo Berrios" src={Mail}></IMG>
                 </ContentContainer>
 

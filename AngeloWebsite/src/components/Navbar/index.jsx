@@ -42,7 +42,7 @@ const Navbar = () =>{
                 { !isMobile &&
                 <Lista className={`${show? 'active':'desactive'}`}>
                     <Links onClick={ShowMenu} to="Home" spy={true} smooth={true} offset={-100} duration={500} isDynamic={true}>Inicio</Links> 
-                    <Links onClick={ShowMenu} to="Portfolio" spy={true} smooth={true} offset={-50} duration={500} isDynamic={true}>Portfolio</Links>    
+                    <Links onClick={ShowMenu} to="Portfolio" spy={true} smooth={true} offset={-25} duration={500} isDynamic={true}>Portfolio</Links>    
                     <Links onClick={ShowMenu} to="Contact" spy={true} smooth={true} offset={-60} duration={500} isDynamic={true}>Contacto</Links>  
                     <Links onClick={ShowMenu} to="Ref" spy={true} smooth={true} offset={-60} duration={500} isDynamic={true}>Referentes</Links>
                 </Lista>
