@@ -1,4 +1,4 @@
-import { ButtonShowMore } from '../Titles/index'
+import { ButtonShowMore, SecondaryTitle } from '../Titles/index'
 import Referentes from "../Referentes";
 import { useState } from 'react';
 const MoreInfo = () =>{
@@ -8,9 +8,11 @@ const MoreInfo = () =>{
 
     return(
         <>
-            <ButtonShowMore id='Ref' className={`${clicked ? 'cliked' : ''}`} onClick={()=>setClicked(true)}>Más sobre mí</ButtonShowMore>
+            <ButtonShowMore className={`${clicked ? 'cliked' : ''}`} onClick={()=>setClicked(true)}>Más sobre mí</ButtonShowMore>
             { clicked &&
-                <Referentes ></Referentes>
+                <>
+                    <Referentes></Referentes>
+                </>
             }
         </>
     )
