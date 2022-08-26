@@ -1,6 +1,6 @@
 import React from "react";
 import { SecondaryTitle } from "../Titles";
-import { ContainRef } from "../Containers";
+import { ContainRef } from "./styles";
 import Referente from "../Referente";
 
 const Referentes = () =>{

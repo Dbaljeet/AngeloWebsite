@@ -11,13 +11,17 @@ const Section = styled.section`
     margin-top:20px;
 `
 
+const List = styled.ul`
+    margin-top:20px;
+`
+
 const Experience = () =>{
     return(
         <> 
         <Section>
             <SecondaryTitle>Experiencias y conocimientos</SecondaryTitle>
 
-            <ul>
+            <List>
                 <Element>
                     Trabajo con base de datos (relacionales, no relacionales y multidimensionales).
                 </Element>
@@ -51,7 +55,7 @@ const Experience = () =>{
                 <Element>
                     Scheme ( uso academico - programación funcional )
                 </Element>
-            </ul>
+            </List>
         </Section>
             </>
     )

@@ -12,6 +12,65 @@ export const Section = styled.section`
     outline: 2px solid #b2d1b5;
   }
 `
+export const FigureCenter = styled.figure`
+  align-self:center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
+
+
+  &:hover {
+    transition: color 1s;
+    &::before, &:hover:after {
+      animation: none;
+      opacity: 0;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+    var(--rotate)
+    , #5dffb3, #8b467e 43%, #50e0d8);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 5.5s linear infinite;
+
+    @media screen and (min-width:622px){
+      transform: scale(1.2);
+    }
+    @media screen and (max-width:622px){
+      transform: scale(1);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+`
 
 export const IMG = styled.img`
     z-index:1;

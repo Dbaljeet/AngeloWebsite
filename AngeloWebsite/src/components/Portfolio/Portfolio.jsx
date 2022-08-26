@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from "react";
 import PYTYM from '../../assets/PYTYM.png'
 import GiphyAll from '../../assets/GiphyAll.png'
 import Arrow from '../../assets/Arrow.svg'
-import { Figure, IMG , Background, Section, ARROW} from "./styles";
+import { Figure,FigureCenter, IMG , Background, Section, ARROW} from "./styles";
 import { SecondaryTitle } from '../Titles/index'
 
 import {ModalPortalPortfolio} from '../Modals/PortfolioModal'
@@ -90,9 +90,9 @@ const Portfolio = () =>{
                 <Figure>
                     <IMG loading="lazy" src={`${previousImage}`} alt="img1" onClick={Previous} className="carr"/>
                 </Figure>
-                <Figure className="FigureCenter">
+                <FigureCenter>
                     <IMG loading="lazy" onClick={()=>setShowModal(true)} src={`${selectedImage}`} alt="img2" className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
-                </Figure>
+                </FigureCenter>
 
                 
 
