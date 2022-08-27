@@ -22,8 +22,9 @@ const ContainerContent = styled.div`
         display:flex;
         flex-direction:column;
         align-items:center;
-        gap:10px;
         justify-content:space-evenly;
+        max-width:100%;
+        max-height:100%;
     }
 `
 
@@ -32,28 +33,25 @@ const Tittle = styled.h2`
     grid-area: 1 / 3 / 2 / 4;
 `
 const IMG = styled.img`
-    width:20em;
+    @media screen and (max-width:622px){
+        object-fit:contain;
+        max-height:200px;
+    }
     @media screen and (min-width:622px){
         grid-area: 1 / 4 / 4 / 6;
         width:20em;
         margin:auto;
-    }
-    
-`
-
-const IMG2 = styled.img`
-    width:10em;
-    @media screen and (max-width:622px){
-        width:2em;
     }
 `
 
 const Deploy = styled.a`
     text-decoration:none;
     grid-area: 2 / 1 / 3 / 3;
+    font-weight: bold;
 `
 
 const Repo = styled.a`
+    font-weight: bold;
     text-decoration:none;
     display:flex;
     flex-direction:column;
@@ -62,7 +60,10 @@ const Repo = styled.a`
 
     &>p{
         text-align:center;
-        margin-bottom:10px;
+        margin-bottom:3px;
+        @media screen and (min-width:622px){
+            margin-bottom:20px;
+        }
     }
 `
 
@@ -72,14 +73,15 @@ const INFO = styled.h3`
     padding: 0 0 20px 0;
     @media screen and (max-width:622px){
         align-self:center;
-        padding: 10px 0;
     }
 `
 
 const ContentInfo = styled.p`
+    font-size:.9rem;
     grid-area: 4 / 1 / 6 / 6;
     @media screen and (min-width:622px){
         padding: 0 200px;
+        font-size:1.5rem;
     }
 `
 
@@ -95,7 +97,7 @@ const ContentPortfolio = ({ Name ,selectedIMG , Github , deploy, Info}) =>{
                 </Deploy>
                 <Repo href = { Github } target='_blank' >
                     <p>ver repositorio</p>
-                    <IMG2 src={GithubImg}></IMG2>
+                    <GithubImg width={'8rem'}/>
                 </Repo>   
                 <INFO>¿De qué trata?</INFO>
                 <ContentInfo>{Info}</ContentInfo>
