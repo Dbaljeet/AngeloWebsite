@@ -49,7 +49,7 @@ export const ButtonShowMore = styled.button`
             -4px -4px 5px 0px #fff9,
             7px 7px 20px 0px #0002,
             4px 4px 5px 0px #0001;
-        transition: all 0.3s ease;
+        transition: all 0.9s ease;
     }
     &:hover {
         color: #ffffff;

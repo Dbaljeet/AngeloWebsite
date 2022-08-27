@@ -46,11 +46,21 @@ const IMG = styled.img`
 
 const Deploy = styled.a`
     text-decoration:none;
+    font-size:1.5rem;
     grid-area: 2 / 1 / 3 / 3;
     font-weight: bold;
+    color:#b8b6b6;
+    &:hover{
+        color:#fff;
+    }
+    transition:color 1s;
+    &>label{
+        cursor: pointer;
+    }
 `
 
 const Repo = styled.a`
+    font-size:1.5rem;
     font-weight: bold;
     text-decoration:none;
     display:flex;
@@ -58,12 +68,13 @@ const Repo = styled.a`
     align-items:center;
     grid-area: 2 / 3 / 3 / 4;
 
-    &>p{
-        text-align:center;
-        margin-bottom:3px;
-        @media screen and (min-width:622px){
-            margin-bottom:20px;
-        }
+    color:#b8b6b6;
+    &:hover{
+        color:#fff;
+    }
+    transition:color 1s;
+    &>label{
+        cursor: pointer;
     }
 `
 
@@ -93,10 +104,12 @@ const ContentPortfolio = ({ Name ,selectedIMG , Github , deploy, Info}) =>{
             <ContainerContent>
                 <Tittle> {Name} </Tittle>
                 
-                <Deploy href = { deploy } target='_blank' >visitar sitio web
+                <Deploy href = { deploy } target='_blank' >
+                    <label>visitar sitio web
+                    </label>
                 </Deploy>
                 <Repo href = { Github } target='_blank' >
-                    <p>ver repositorio</p>
+                    <label>ver repositorio</label>
                     <GithubImg width={'8rem'}/>
                 </Repo>   
                 <INFO>¿De qué trata?</INFO>

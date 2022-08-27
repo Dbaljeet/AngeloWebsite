@@ -10,6 +10,7 @@ const ARROW = styled.button`
     &:hover{
         color:#fff;
     }
+    transition: color 1s;
 
 `
 const Arrow = ({width, left, onClick, color}) =>{

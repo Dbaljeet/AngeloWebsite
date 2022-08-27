@@ -104,11 +104,11 @@ const Portfolio = () =>{
             </Amount>
             
 
-                <Arrow widht={'24px'} color="#ffffffdc" onClick={Previous} left={true}></Arrow>
+                <Arrow widht={'24px'} color="#ffffffb0" onClick={Previous} left={true}></Arrow>
 
 
 
-                <Arrow widht={'24px'} color="#ffffffdc" onClick={Next} left={false}></Arrow>
+                <Arrow widht={'24px'} color="#ffffffb0" onClick={Next} left={false}></Arrow>
 
         </Section>
 
