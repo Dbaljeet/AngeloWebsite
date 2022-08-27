@@ -134,10 +134,7 @@ export const Background = styled.section `
   }
   
 `
-
-export const ARROW = styled.img`
-  background-color:transparent;
-  cursor: pointer;
-  width:100px;
-  ${props=>props.left && 'transform:rotateY(3.142rad)'}
+export const Amount = styled.label`
+  display:block;
+  color:#fff;
 `

@@ -1,8 +1,8 @@
 import React, {useState, useRef, useEffect} from "react";
 import PYTYM from '../../assets/PYTYM.png'
 import GiphyAll from '../../assets/GiphyAll.png'
-import Arrow from '../../assets/Arrow.svg'
-import { Figure,FigureCenter, IMG , Background, Section, ARROW} from "./styles";
+import Arrow from '../../assets/Arrow'
+import { Figure,FigureCenter, IMG , Background, Section, Amount } from "./styles";
 import { SecondaryTitle } from '../Titles/index'
 
 import {ModalPortalPortfolio} from '../Modals/PortfolioModal'
@@ -21,11 +21,10 @@ const Portfolio = () =>{
 
     const where = `${selectedIndex+1}/${LENGTH}`
 
-    const [previousIndex,setPreviousIndex] = useState(LENGTH)
+
     const [previousImage, setPreviousImage] = useState(images[LENGTH-1])
 
     const [nextImage, setNextImage] = useState(images[1])
-    const [nextIndex, setNextIndex] = useState(images[1])
 
     const [loaded, setLoaded] = useState(false)
 
@@ -45,11 +44,11 @@ const Portfolio = () =>{
     };
     useEffect(() => {
         if ( selectedIndex == 0 ){
-            setPreviousIndex(LENGTH - 1)
+            
             setPreviousImage(images[LENGTH - 1])
             setNextImage[ 1 ]
         }else{
-            setPreviousIndex(selectedIndex - 1)
+            
             setPreviousImage(images[selectedIndex - 1])
             
         }
@@ -100,16 +99,16 @@ const Portfolio = () =>{
                     <IMG loading="lazy" src={`${nextImage}`} alt="img3" onClick={Next} className="carr"/>
                 </Figure>
             </Background>
-            <div>
+            <Amount>
                 {where}
-            </div>
+            </Amount>
             
 
-                <ARROW onClick={Previous} src={Arrow} left={true}></ARROW>
+                <Arrow widht={'24px'} color="#ffffffdc" onClick={Previous} left={true}></Arrow>
 
 
 
-                <ARROW onClick={Next} src={Arrow} left={false}></ARROW>
+                <Arrow widht={'24px'} color="#ffffffdc" onClick={Next} left={false}></Arrow>
 
         </Section>
 
