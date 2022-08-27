@@ -145,6 +145,7 @@ export const Links = styled(Link)`
     }
     @media screen and (min-width: 622px){
         height:40px;
+        font-size:1.8rem;
     }
 
     width: 130px;
