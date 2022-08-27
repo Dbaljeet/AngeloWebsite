@@ -7,7 +7,7 @@ const Figure = styled.figure`
     display:inline-flex;
     flex-direction:column;
     align-items:center;
-
+    color:#fff;
     :hover{
         &>a:hover{
             &>.IMG{

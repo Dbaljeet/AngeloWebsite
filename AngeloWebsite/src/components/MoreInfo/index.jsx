@@ -1,4 +1,4 @@
-import { ButtonShowMore, SecondaryTitle } from '../Titles/index'
+import { ButtonShowMore } from '../Titles/index'
 import Referentes from "../Referentes";
 import { useState } from 'react';
 const MoreInfo = () =>{

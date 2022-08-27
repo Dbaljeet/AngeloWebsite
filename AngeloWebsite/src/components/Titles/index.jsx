@@ -20,6 +20,7 @@ export const  SecondaryTitle = styled.h2`
 `
 
 export const ButtonShowMore = styled.button`
+    color:#d6d6d6;
     background-color:transparent;
     border:2px solid #b2d1b5;
     font-size:2.5rem;

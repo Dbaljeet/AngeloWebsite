@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import GithubImg from '../../assets/Github.svg'
+import GithubImg from '../../assets/Github'
 
 //400 16px/24px Google Sans Text,Arial,Helvetica,sans-serif
 

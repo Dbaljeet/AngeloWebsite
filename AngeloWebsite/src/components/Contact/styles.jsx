@@ -13,9 +13,19 @@ export const ContentScroll = styled.div`
 export const ContentContainer = styled.a`
     margin:auto;
     justify-content:space-around;
+    color:${props=>props.color};
+    transition: all 2s;
+    &:hover{
+        color:#fff;
+        -webkit-transform:scale(1.25);
+        -moz-transform:scale(1.25);
+        -ms-transform:scale(1.25);
+        -o-transform:scale(1.25);
+        transform:scale(1.25);
+    }
 `
 
 export const IMG = styled.img`
-    width:100px;
-    
+    width:${props=>props.width};
+    padding:30px 0;
 `
