@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import {PrincipalTitle, ButtonShowMore} from '../components/Titles'
+import React from "react";
+import { PrincipalTitle } from '../components/Titles'
 import Portfolio from "../components/Portfolio/Portfolio";
 import About from "../components/About";
 import Contact from "../components/Contact";
