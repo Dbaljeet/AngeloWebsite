@@ -5,7 +5,7 @@ import styled from "styled-components";
 const ContentModal = styled.div`
     
     position:fixed;
-    z-index:99;
+    z-index:101;
     
     background-color:#3d2f3d;
     padding:40px;
@@ -55,12 +55,38 @@ const CloseModal = styled.button.attrs(props => ({
     margin-bottom:20px;
 `;
 
+const Background = styled.div`
+    position:fixed;
+    z-index:100;
+    background-color:#000000ba;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    
+    animation: Backgroundd 1s;
+
+    @keyframes Backgroundd {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+`
+
 export const ModalPortfolio = ({children, onClose})=>{
-    return <ContentModal>
+    return( 
+    <>
+    <Background>
+    </Background>
+    <ContentModal>
         <CloseModal className="close" onClick={onClose}></ CloseModal>
         <>{children}</>
-        
     </ContentModal>
+    </>
+    )
 };
 export const ModalPortalPortfolio = ({children, onClose}) =>{
     return ReactDOM.createPortal(<ModalPortfolio onClose={onClose}>{children}</ModalPortfolio>
