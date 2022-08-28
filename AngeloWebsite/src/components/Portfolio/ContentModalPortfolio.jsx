@@ -36,10 +36,16 @@ const IMG = styled.img`
     @media screen and (max-width:622px){
         object-fit:contain;
         max-height:200px;
+        margin-bottom:50px;
     }
-    @media screen and (min-width:622px){
+    @media screen and (min-width:1340px){
         grid-area: 1 / 4 / 4 / 6;
         width:20em;
+        margin:auto;
+    }
+    @media screen and (max-width:1340px) and (min-width: 622px){
+        grid-area: 1 / 4 / 4 / 6;
+        width:10rem;
         margin:auto;
     }
 `
