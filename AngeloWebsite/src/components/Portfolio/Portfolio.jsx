@@ -25,6 +25,7 @@ const Portfolio = () =>{
     const [previousImage, setPreviousImage] = useState(images[LENGTH-1])
 
     const [nextImage, setNextImage] = useState(images[1])
+    const [nextIndex, setNextIndex] = useState(1)
 
     const [loaded, setLoaded] = useState(false)
 
@@ -55,8 +56,10 @@ const Portfolio = () =>{
 
         if ( selectedIndex == LENGTH - 1){
             setNextImage(images[0])
+            setNextIndex(0)
         }else{
             setNextImage(images[selectedIndex + 1])
+            setNextIndex(selectedIndex + 1)
         }
     }, [selectedIndex]);
 
@@ -87,16 +90,16 @@ const Portfolio = () =>{
             <SecondaryTitle>Portfolio</SecondaryTitle>
             <Background>
                 <Figure>
-                    <IMG loading="lazy" src={`${previousImage}`} alt="img1" onClick={Previous} className="carr"/>
+                    <IMG loading="lazy" src={`${previousImage}`} alt={`imagen de '${InfoRep.names.at(selectedIndex-1)}' proyecto realizado por Angelo Berrios Pinto`} onClick={Previous} className="carr"/>
                 </Figure>
                 <FigureCenter>
-                    <IMG loading="lazy" onClick={()=>setShowModal(true)} src={`${selectedImage}`} alt="img2" className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
+                    <IMG loading="lazy" onClick={()=>setShowModal(true)} src={`${selectedImage}`} alt={`imagen de '${InfoRep.names[selectedIndex]}' proyecto realizado por Angelo Berrios Pinto`} className={loaded? 'loaded' : ''} onLoad={()=>setLoaded(true)}/>
                 </FigureCenter>
 
                 
 
                 <Figure>
-                    <IMG loading="lazy" src={`${nextImage}`} alt="img3" onClick={Next} className="carr"/>
+                    <IMG loading="lazy" src={`${nextImage}`} alt={`imagen de '${InfoRep.names.at(nextIndex)}' proyecto realizado por Angelo Berrios Pinto`} onClick={Next} className="carr"/>
                 </Figure>
             </Background>
             <Amount>
@@ -104,11 +107,11 @@ const Portfolio = () =>{
             </Amount>
             
 
-                <Arrow widht={'24px'} color="#ffffffb0" onClick={Previous} left={true}></Arrow>
+                <Arrow widht={'24px'} color="#ffffffb0" onClick={Previous} left={true} title="Anterior"></Arrow>
 
 
 
-                <Arrow widht={'24px'} color="#ffffffb0" onClick={Next} left={false}></Arrow>
+                <Arrow widht={'24px'} color="#ffffffb0" onClick={Next} left={false} title="Siguiente"></Arrow>
 
         </Section>
 
