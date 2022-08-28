@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components'
 import { SecondaryTitle } from '../Titles/index'
 
@@ -18,42 +18,48 @@ const List = styled.ul`
 const Experience = () =>{
     return(
         <> 
-        <Section>
-            <SecondaryTitle>Experiencias y conocimientos</SecondaryTitle>
+        <Section id="Experience">
+            <SecondaryTitle>Conocimientos</SecondaryTitle>
 
             <List>
                 <Element>
-                    Trabajo con base de datos (relacionales, no relacionales y multidimensionales).
+                    Trabajo con <b>base de datos</b> (relacionales, no relacionales y multidimensionales).
                 </Element>
                 <Element>
-                    Conocimentos de programación orientada a objetos.
+                    Conocimentos de <b>programación orientada a objetos</b>.
                 </Element>
                 <Element>
-                    Conocimientos de estructuras de datos.
+                    Conocimientos de <b>estructuras de datos</b>.
                 </Element>
                 <Element>
-                    Ingeniería de software, métodologia agile.
+                <b>Ingeniería de software</b>, métodologia agile y buenas prácticas.
                 </Element>
                 <Element>
-                    Data Science con Python (uso de Elementbreria pandas).
+                <b>Data Science</b> con Python (uso de libreria pandas con millones de datos).
                 </Element>
                 <Element>
-                    ReaElementzación ETL (extract transform load).
+                    Realización <b>ETL</b> (extract transform load).
                 </Element>
                 <Element>
-                    ReaElementzación de dos videojuegos en unity para asignaturas de la universidad.
+                    Realización de <b>videojuegos en unity</b>.
                 </Element>
                 <Element>
-                    Frontend ( Javascript, Html, Css - React - Next ).
+                <b>Frontend</b> con Javascript, Html, Css - React - Nextjs.
                 </Element>
                 <Element>
-                    Backend ( Express ).
+                <b>Backend</b> ( Nodejs - Express ).
                 </Element>
                 <Element>
-                    Javascript, Java, Python, C++, C# (por unity).
+                    Realización de <b>interfaces</b> para aplicaciones de escritorio con python ( Tkinter )
                 </Element>
                 <Element>
-                    Scheme ( uso academico - programación funcional )
+                <b>Uso de lenguajes</b>: Javascript, Java, Python, C++, C# ( por unity ).
+                </Element>
+                <Element>
+                    Lenguaje Scheme ( aunque solo ha tenido uso académico - <b>programación funcional</b> )
+                </Element>
+                <Element>
+                <b>Aplicaciones móviles</b> con React native ( proyecto en proceso )
                 </Element>
             </List>
         </Section>
