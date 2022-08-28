@@ -7,13 +7,14 @@ const ContentModal = styled.div`
     position:fixed;
     z-index:101;
     padding-top:2px;
-    padding-left:7px;
+    
     backdrop-filter: blur(2px);
     @media screen and (min-width: 765px){
         bottom:5%;
         top: 10%;;
         left:10%;
         right:10%;
+        padding-left:7px;
     }
     @media screen and (max-width: 765px){
         top:0%;
@@ -73,7 +74,6 @@ const Background = styled.div`
     bottom:0;
     left:0;
     right:0;
-    
     animation: Backgroundd 1s;
 
     @keyframes Backgroundd {
