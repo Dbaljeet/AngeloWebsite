@@ -6,9 +6,6 @@ const ContentModal = styled.div`
     
     position:fixed;
     z-index:101;
-    
-    background-color:#3d2f3d;
-    padding:40px;
     padding-top:2px;
     padding-left:7px;
     backdrop-filter: blur(2px);
@@ -43,6 +40,19 @@ const ContentModal = styled.div`
     }
     &.close:after {
         transform: rotate(-45deg);
+    }
+    background-image: linear-gradient(to bottom, #7f4d7f, #49598c, #005f80, #005e63, #315947);
+    
+    animation: Back 1.3s;
+    
+
+    @keyframes Back {
+        from{
+            opacity:0.2;
+        }
+        to{
+            opacity:1;
+        }
     }
 `;
 
