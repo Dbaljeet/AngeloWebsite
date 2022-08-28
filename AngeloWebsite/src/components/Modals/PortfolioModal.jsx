@@ -44,12 +44,12 @@ const ContentModal = styled.div`
     }
     background-image: linear-gradient(to bottom, #7f4d7f, #49598c, #005f80, #005e63, #315947);
     
-    animation: Back 1.3s;
+    animation: Back .8s;
     
 
     @keyframes Back {
         from{
-            opacity:0.2;
+            opacity:0.5;
         }
         to{
             opacity:1;
