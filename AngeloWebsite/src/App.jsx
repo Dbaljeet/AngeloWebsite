@@ -2,7 +2,7 @@ import './App.css'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from '../src/pages/Home'
 import Navbar from './components/Navbar';
-import HungerBar from '../src/components/hungerBar'
+import HungerBar from '../src/components/HungerBar'
 /*
 import reactLogo from './assets/react.svg'
 <img width="60px" src="/vite.svg" className="logo" alt="Vite logo" />
