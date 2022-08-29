@@ -52,7 +52,7 @@ const Referente = ({name, image, twitter}) =>{
         <>
             <Figure>
                 <A target='_blank' href={twitter}>
-                    <IMG loading="lazy" src={image} alt={`imagen de ${name}`}/>
+                    <IMG className="IMG" loading="lazy" src={image} alt={`imagen de ${name}`}/>
                     <TwitterSvg/>
                 </A>   
                 <Label>{name}</Label>
