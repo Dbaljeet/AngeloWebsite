@@ -2,7 +2,7 @@ import React from "react";
 import { SecondaryTitle } from "../Titles";
 import { ContainRef } from "./styles";
 import Referente from "../Referente";
-import Midudev from '../../assets/midudev.jpg'
+import Midudev from '../../assets/Midudev.jpg'
 import HolaMundo from '../../assets/HolaMundo.jpg'
 const Referentes = () =>{
 
