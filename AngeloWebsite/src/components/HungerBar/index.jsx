@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Hunger from "./Hunger";
-import {HUDminecraft} from '../hungerBar/styles'
+import {HUDminecraft} from '../HungerBar/styles'
 const Footer = () =>{
     const [ posy, setPosy] = useState(window.scrollY)
     const [ sumposY, setSumposy] = useState(0)
