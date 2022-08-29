@@ -2,11 +2,13 @@ import React from "react";
 import { SecondaryTitle } from "../Titles";
 import { ContainRef } from "./styles";
 import Referente from "../Referente";
+import Midudev from '../../assets/midudev.jpg'
+import HolaMundo from '../../assets/HolaMundo.jpg'
 const Referentes = () =>{
 
     const info = [
-        {name:"midudev",image:"../../assets/midudev.jpg", twitter:'https://twitter.com/midudev' },
-        {name:"HolaMundo",image:"../../assets/HolaMundo.jpg", twitter: 'https://twitter.com/_nasch_' },
+        {name:"midudev",image:Midudev, twitter:'https://twitter.com/midudev' },
+        {name:"HolaMundo",image:HolaMundo, twitter: 'https://twitter.com/_nasch_' },
         
     ]
 
