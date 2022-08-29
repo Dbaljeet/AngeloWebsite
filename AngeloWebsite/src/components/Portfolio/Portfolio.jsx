@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from "react";
-import PYTYM from '../../assets/PYTYM.png'
-import GiphyAll from '../../assets/GiphyAll.png'
+import PYTYM from '../../assets/PYTYM.jpg'
+import GiphyAll from '../../assets/GiphyAll.jpg'
 import Arrow from '../../assets/Arrow'
 import { Figure,FigureCenter, IMG , Background, Section, Amount } from "./styles";
 import { SecondaryTitle } from '../Titles/index'
