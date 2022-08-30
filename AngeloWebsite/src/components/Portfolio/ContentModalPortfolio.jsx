@@ -109,9 +109,9 @@ const ContentPortfolio = ({ Name ,selectedIMG , Github , deploy, Info}) =>{
         <>
             <ContainerContent>
                 <Tittle> {Name} </Tittle>
-                
                 <Deploy href = { deploy } target='_blank' >
-                    <label>visitar sitio web
+                    <label>
+                    {Name==='PYTYM'? 'Aún no desplegado':'visitar sitio web'}
                     </label>
                 </Deploy>
                 <Repo href = { Github } target='_blank' >
