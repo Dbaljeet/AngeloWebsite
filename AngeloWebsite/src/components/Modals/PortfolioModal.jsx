@@ -15,6 +15,7 @@ const ContentModal = styled.div`
         left:10%;
         right:10%;
         padding-left:7px;
+        animation: Back .8s;
     }
     @media screen and (max-width: 765px){
         top:0%;
@@ -44,7 +45,7 @@ const ContentModal = styled.div`
     }
     background-image: linear-gradient(to bottom, #7f4d7f, #49598c, #005f80, #005e63, #315947);
     
-    animation: Back .8s;
+    
     
 
     @keyframes Back {

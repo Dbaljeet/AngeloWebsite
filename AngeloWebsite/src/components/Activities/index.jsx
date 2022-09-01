@@ -3,6 +3,9 @@ import { SecondaryTitle } from '../Titles'
 
 const Container = styled.section`
     padding-bottom:50px;
+    @media screen and (max-width:1000px){
+        padding: 0 2rem 60px 2rem;
+    }
 `
 const LI = styled.li`
     list-style:none;

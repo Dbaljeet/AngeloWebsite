@@ -33,7 +33,7 @@ const IMG = styled.img`
     @media screen and (max-width:622px){
         width:250px;
     }
-    transition: opacity 2s, filter 1s;
+    transition: opacity 2s  ease, filter 1s  ease;
     
 `
 

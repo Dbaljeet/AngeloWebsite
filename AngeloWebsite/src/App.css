@@ -51,3 +51,7 @@ p, h1, h2, h3, li, a{
   --card-height: 65vh;
   --card-width: calc(var(--card-height) / 1.5);
 }
+
+.Home{
+  width: 100%;
+}

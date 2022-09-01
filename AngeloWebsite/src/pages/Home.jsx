@@ -8,10 +8,9 @@ import MoreInfo from "../components/MoreInfo";
 const Home = () =>{
     return (
         <>
-            <div id="Home">
-                <PrincipalTitle colorRef="#fff">Angelo Berrios Pinto</PrincipalTitle>
-                <About></About>
-            </div>
+            
+            <PrincipalTitle>Angelo Berrios Pinto</PrincipalTitle>
+            <About></About>
             <Portfolio></Portfolio>
             <Experience></Experience>
             <Contact></Contact>

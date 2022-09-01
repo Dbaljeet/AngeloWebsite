@@ -13,6 +13,9 @@ const Section = styled.section`
 
 const List = styled.ul`
     margin-top:20px;
+    @media screen and (max-width:1000px){
+        padding: 0 2rem;
+    }
 `
 
 const Experience = () =>{

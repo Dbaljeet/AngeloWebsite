@@ -1,5 +1,5 @@
 import React, {useState, useRef, useEffect} from "react";
-import PYTYM from '../../assets/PYTYM.jpg'
+import PYTYM from '../../assets/PYTYM.webp'
 import GiphyAll from '../../assets/GiphyAll.jpg'
 import Arrow from '../../assets/Arrow'
 import { Figure,FigureCenter, IMG , Background, Section, Amount } from "./styles";

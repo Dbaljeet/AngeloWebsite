@@ -73,6 +73,7 @@ export const FigureCenter = styled.figure`
 `
 
 export const IMG = styled.img`
+    will-change: opacity;
     z-index:1;
     cursor: pointer;
     object-fit:cover;

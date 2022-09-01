@@ -22,3 +22,8 @@ export const ContainRef = styled.section`
   }
   
 `
+export const Why = styled.p`
+  @media screen and (max-width: 622px){
+    padding:0 2rem;
+  }
+`

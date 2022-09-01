@@ -14,8 +14,10 @@ const About = () =>{
             <Aboutme>
                 22 años
             </Aboutme>
-            <Aboutme bold={true}>
-                En busca de práctica laboral
+            <Aboutme>
+                <b>
+                En busca de práctica profesional
+                </b>
             </Aboutme>
         </Container>
             

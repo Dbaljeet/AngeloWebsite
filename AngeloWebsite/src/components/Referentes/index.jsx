@@ -1,6 +1,6 @@
 import React from "react";
 import { SecondaryTitle } from "../Titles";
-import { ContainRef } from "./styles";
+import { ContainRef, Why } from "./styles";
 import Referente from "../Referente";
 import Midudev from '../../assets/Midudev.jpg'
 import HolaMundo from '../../assets/HolaMundo.jpg'
@@ -15,6 +15,7 @@ const Referentes = () =>{
     return(
         <>
         <SecondaryTitle id="Men">Referentes</SecondaryTitle>
+        <Why>Estas son personas que para mí son un ejemplo a seguir en el área</Why>
         <ContainRef>
             {
             info.map (( { name , image, twitter} ) => 
