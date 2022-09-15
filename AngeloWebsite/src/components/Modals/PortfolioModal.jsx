@@ -12,7 +12,7 @@ const ContentModal = styled.div`
 
   backdrop-filter: blur(2px);
   @media screen and (min-width: 765px) {
-    top: 70%;
+    top: 10%;
     left: 10%;
     padding-left: 7px;
     animation: Back 0.8s;
@@ -94,7 +94,10 @@ const Cont = styled.div`
   width: 100%;
   z-index: 101;
   left: 0;
-  top: 80px;
+  top: 25%;
+  @media screen and (max-width: 740px) {
+    top: 10%;
+  }
 `
 
 export const ModalPortfolio = ({ children, onClose }) => {

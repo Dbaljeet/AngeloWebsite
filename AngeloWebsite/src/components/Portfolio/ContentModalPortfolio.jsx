@@ -36,7 +36,7 @@ const Tittle = styled.h2`
 const IMG = styled.img`
   max-width: 300px;
   align-self: center;
-  @media screen and (max-width: 765px) {
+  @media screen and (max-width: 768px) {
     max-width: 250px;
   }
 `
