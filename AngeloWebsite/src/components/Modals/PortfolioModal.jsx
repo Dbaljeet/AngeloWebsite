@@ -1,26 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import styled from "styled-components";
+import React from "react"
+import ReactDOM from "react-dom"
+import styled from "styled-components"
 
 const ContentModal = styled.div`
-  position: fixed;
+  overflow-y: auto;
+  position: absolute;
   z-index: 101;
   padding-top: 2px;
+  width: 80%;
+  max-height: 80vh;
 
   backdrop-filter: blur(2px);
   @media screen and (min-width: 765px) {
-    bottom: 5%;
-    top: 10%;
+    top: 70%;
     left: 10%;
-    right: 10%;
     padding-left: 7px;
     animation: Back 0.8s;
   }
   @media screen and (max-width: 765px) {
-    top: 7%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+    top: 10%;
+    left: 10%;
   }
 
   &.close {
@@ -60,7 +59,7 @@ const ContentModal = styled.div`
       opacity: 1;
     }
   }
-`;
+`
 
 const CloseModal = styled.button.attrs((props) => ({
   onClick: props.onClick,
@@ -69,7 +68,7 @@ const CloseModal = styled.button.attrs((props) => ({
   background-color: transparent;
   cursor: pointer;
   margin-bottom: 20px;
-`;
+`
 
 const Background = styled.div`
   position: fixed;
@@ -89,22 +88,31 @@ const Background = styled.div`
       opacity: 1;
     }
   }
-`;
+`
+const Cont = styled.div`
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+  left: 0;
+  top: 80px;
+`
 
 export const ModalPortfolio = ({ children, onClose }) => {
   return (
     <>
       <Background></Background>
-      <ContentModal>
-        <CloseModal className="close" onClick={onClose}></CloseModal>
-        <>{children}</>
-      </ContentModal>
+      <Cont>
+        <ContentModal>
+          <CloseModal className='close' onClick={onClose}></CloseModal>
+          <>{children}</>
+        </ContentModal>
+      </Cont>
     </>
-  );
-};
+  )
+}
 export const ModalPortalPortfolio = ({ children, onClose }) => {
   return ReactDOM.createPortal(
     <ModalPortfolio onClose={onClose}>{children}</ModalPortfolio>,
     document.getElementById("modal-root")
-  );
-};
+  )
+}

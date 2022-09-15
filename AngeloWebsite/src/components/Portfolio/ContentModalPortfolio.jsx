@@ -1,128 +1,112 @@
-import React from "react";
-import styled from "styled-components";
-import GithubImg from '../../assets/Github'
+import React from "react"
+import styled from "styled-components"
+import GithubImg from "../../assets/Github"
 
 //400 16px/24px Google Sans Text,Arial,Helvetica,sans-serif
 
 const ContainerContent = styled.div`
-    font-family: 'Noto Sans', sans-serif;
-    border-top:1px solid #000;
-    text-align:center;
-    display:grid;
-    padding:0 10px;
-    width:100%;
-    height:100%;
-    grid-template-columns: repeat(2, 1fr) 2fr repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    justify-items:center;
+  font-family: "Noto Sans", sans-serif;
+  border-top: 1px solid #000;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  width: 100%;
+  height: 100%;
+  gap: 40px;
+  padding: 15px 0;
 
-    @media screen and (max-width:622px){
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:space-evenly;
-        max-width:100%;
-        max-height:100%;
-    }
+  justify-items: center;
+
+  @media screen and (max-width: 740px) {
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 100%;
+    max-height: 100%;
+  }
 `
 
 const Tittle = styled.h2`
-    font-size:3rem;
-    grid-area: 1 / 3 / 2 / 4;
+  font-size: 3rem;
+  text-align: center;
 `
 const IMG = styled.img`
-    @media screen and (max-width:622px){
-        object-fit:contain;
-        max-height:200px;
-        margin-bottom:50px;
-    }
-    @media screen and (min-width:1340px){
-        grid-area: 1 / 4 / 4 / 6;
-        width:20em;
-        margin:auto;
-    }
-    @media screen and (max-width:1340px) and (min-width: 622px){
-        grid-area: 1 / 4 / 4 / 6;
-        width:10rem;
-        margin:auto;
-    }
+  max-width: 300px;
+  align-self: center;
+  @media screen and (max-width: 765px) {
+    max-width: 250px;
+  }
 `
 
 const Deploy = styled.a`
-    text-decoration:none;
-    font-size:1.5rem;
-    grid-area: 2 / 1 / 3 / 3;
-    font-weight: bold;
-    color:#b8b6b6;
-    &:hover{
-        color:#fff;
-    }
-    transition:color 1s;
-    &>label{
-        cursor: pointer;
-    }
+  text-decoration: none;
+  font-size: 1.5rem;
+
+  font-weight: bold;
+  color: #b8b6b6;
+  &:hover {
+    color: #fff;
+  }
+  transition: color 1s;
+  & > label {
+    cursor: pointer;
+  }
 `
 
 const Repo = styled.a`
-    font-size:1.5rem;
-    font-weight: bold;
-    text-decoration:none;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    grid-area: 2 / 3 / 3 / 4;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    color:#b8b6b6;
-    &:hover{
-        color:#fff;
-    }
-    transition:color 1s;
-    &>label{
-        cursor: pointer;
-    }
+  color: #b8b6b6;
+  &:hover {
+    color: #fff;
+  }
+  transition: color 1s;
+  & > label {
+    cursor: pointer;
+  }
 `
 
 const INFO = styled.h3`
-    grid-area: 3 / 1 / 4 / 6;
-    align-self:end;
-    padding: 0 0 20px 0;
-    @media screen and (max-width:622px){
-        align-self:center;
-    }
+  margin-bottom: 10px;
 `
 
 const ContentInfo = styled.p`
-    font-size:.9rem;
-    grid-area: 4 / 1 / 6 / 6;
-    @media screen and (min-width:622px){
-        padding: 0 200px;
-        font-size:1.5rem;
-    }
-`
+  font-size: 0.9rem;
 
-//.div1 { grid-area: 2 / 1 / 3 / 2; }
-//.div2 { grid-area: 3 / 1 / 4 / 2; }
-const ContentPortfolio = ({ Name ,selectedIMG , Github , deploy, Info}) =>{
-    return(
-        <>
-            <ContainerContent>
-                <Tittle> {Name} </Tittle>
-                <Deploy href = { deploy } target='_blank' >
-                    <label>
-                    {Name==='PYTYM'? 'Aún no desplegado':'visitar sitio web'}
-                    </label>
-                </Deploy>
-                <Repo href = { Github } target='_blank' >
-                    <label>ver repositorio</label>
-                    <GithubImg width={'8rem'}/>
-                </Repo>   
-                <INFO>¿De qué trata?</INFO>
-                <ContentInfo>{Info}</ContentInfo>
-                <IMG src={selectedIMG}></IMG>
-            </ContainerContent>
-        </>
-    )
+  @media screen and (min-width: 622px) {
+    font-size: 1.5rem;
+  }
+`
+const ContentPortfolio = ({ Name, selectedIMG, Github, deploy, Info }) => {
+  return (
+    <>
+      <Tittle> {Name} </Tittle>
+      <ContainerContent>
+        <IMG src={selectedIMG}></IMG>
+
+        <Repo href={Github} target='_blank'>
+          <label>ver repositorio</label>
+          <GithubImg width={"8rem"} />
+        </Repo>
+        <div>
+          <INFO>¿De qué trata?</INFO>
+          <ContentInfo>{Info}</ContentInfo>
+        </div>
+        <Deploy href={deploy} target='_blank'>
+          <label>
+            {Name === "PYTYM" ? "Aún no desplegado" : "visitar sitio web"}
+          </label>
+        </Deploy>
+      </ContainerContent>
+    </>
+  )
 }
 export default ContentPortfolio
