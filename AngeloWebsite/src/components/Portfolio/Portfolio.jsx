@@ -93,6 +93,7 @@ const Portfolio = () => {
 
   const handleClose = () => {
     setShowModal(false)
+    document.body.style.overflow = "auto"
   }
 
   return (
