@@ -27,7 +27,7 @@ const Referentes = () => {
       isTwitter: true,
     },
     {
-      name: 'Codigo Morsa',
+      name: 'Código Morsa',
       image: Morsa,
       twitter: 'https://www.youtube.com/c/CódigoMorsa/',
       isTwitter: false,
