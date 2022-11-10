@@ -10,9 +10,6 @@ const About = () => {
         <br></br>
         <Aboutme>La Serena, Chile</Aboutme>
         <Aboutme>23 años</Aboutme>
-        <Aboutme>
-          <b>En busca de práctica profesional</b>
-        </Aboutme>
       </Container>
     </>
   )
